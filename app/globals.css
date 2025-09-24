@@ -6,10 +6,24 @@
 }
 
 @theme inline {
+  /* Define breakpoints for responsive design */
+  --breakpoint-ms: 42rem;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* --color-text: #fff; */
+  /* --color-primary: #290633;
+  --color-secondary: #180425; */
+  /* --color-primary: #31083d; */
+  /* --color-secondary: #290633; */
+  /* --color-dark: #200627;
+  --color-bg: #0f0213; */
+  /* Font Families */
+  --font-commandp: commandp;
+  --font-font: font;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +37,63 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.mask-radial {
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0.5) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}
+
+.zoom-in {
+  animation:
+    zoomIn 1s ease-in-out forwards,
+    floatingUpDown 2s ease-in-out 1s infinite;
+}
+
+.floatingLeftRight {
+  animation: floatingLeftRight 1s ease-in-out infinite;
+}
+
+.floatingUpDown {
+  animation: floatingUpDown 1s ease-in-out infinite;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes floatingLeftRight {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatingUpDown {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
 }
