@@ -57,7 +57,7 @@ export const Main: React.FC = () => {
           <span className="text-violet-900">Hi, I'm</span> Yoana
         </h1>
         <Description />
-        <div className="flex 2xl:gap-25 ms:gap-15 gap-5 2xl:mt-5">
+        <div className="flex xl:justify-start justify-center 2xl:gap-25 ms:gap-15 gap-5 2xl:mt-5 w-full">
           <a
             href="#"
             className="font-font flex gap-[20px] no-underline hover:text-violet-900 text-[color:var(--color-text)] rounded-[10px] 2xl:text-4xl xl:text-3xl lg:text-4xl text-3xl font-light  border-2 border-transparent bg-[length:0%] font-semibold transition-colors"
@@ -73,7 +73,7 @@ export const Main: React.FC = () => {
           </a>
           <a
             href="#contact"
-            className=" font-font flex gap-[20px] no-underline text-violet-900 hover:text-white rounded-[10px] 2xl:text-4xl text-3xl font-light border-2 border-transparent bg-[length:0%] font-semibold transition-colors"
+            className=" font-font flex gap-[20px] no-underline text-violet-900 hover:text-white rounded-[10px] 2xl:text-4xl xl:text-3xl lg:text-4xl text-3xl font-light border-2 border-transparent bg-[length:0%] font-semibold transition-colors"
           >
             Let's Conect
             <CircleChevronRight className="size-9 floatingLeftRight" />
