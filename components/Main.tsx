@@ -41,7 +41,7 @@ export const Main: React.FC = () => {
   };
 
   return (
-    <section className="relative flex xl:flex-row flex-col items-center justify-between mt-[50px] z-[1] pl-[5%] pr-[5%]">
+    <section className="relative flex xl:flex-row flex-col items-center justify-between mt-[50px] z-[1] lg:px-[5%]">
       <Image
         className="zoom-in z-[1] xl:w-2/5 w-2/3 rounded-full shadow-[0_3px_8px_rgba(0,0,0,0.24)] cursor-pointer animate-zoomIn "
         src={"/hero.jpg"}
