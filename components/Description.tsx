@@ -23,7 +23,7 @@ const Description: React.FC = () => {
   return (
     <div>
       {/* Add your description content here */}
-      <p className="text-white/80 font-font 2xl:text-3xl xl:text-2xl lg:text-3xl text-2xl font-[var(--font-roboto)] text-justify mb-[52px] xl:h-[30vh] h-fit">
+      <p className="text-white/80 font-font 2xl:text-3xl xl:text-2xl lg:text-3xl sm:text-2xl text-xl font-[var(--font-roboto)] text-justify mb-[52px] xl:h-[30vh] h-fit">
         {text}
       </p>
     </div>

@@ -66,13 +66,13 @@ export function Header({
           width="100"
           height="100"
         /> */}
-        <span className="text-white/60 font-commandp text-6xl font-bold group-hover:text-white transition-colors">
+        <span className="text-white/60 font-commandp md:text-6xl text-4xl font-bold group-hover:text-white transition-colors">
           &lt;
         </span>
-        <h1 className="font-semibold text-4xl text-violet-900 text-shadow-lg group-hover:text-white transition-colors">
+        <h1 className="font-semibold md:text-4xl text-2xl text-violet-900 text-shadow-lg group-hover:text-white transition-colors">
           yoana_leon
         </h1>
-        <span className="text-white/60 font-commandp text-6xl font-bold group-hover:text-white transition-colors">
+        <span className="text-white/60 font-commandp md:text-6xl text-4xl font-bold group-hover:text-white transition-colors">
           /&gt;
         </span>
       </Link>
@@ -105,7 +105,7 @@ export function Header({
         </NavigationMenuList> */}
       </div>
       <Menu
-        className={`xl:hidden flex text-white/80 hover:text-white transition-color  flex size-10 cursor-pointer`}
+        className={`xl:hidden flex text-white/80 hover:text-white transition-color  flex md:size-10 size-7 cursor-pointer`}
         // onClick={(event) => toggleSidebar()}
       />
     </header>

@@ -52,7 +52,7 @@ export const Main: React.FC = () => {
         // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       />
       <div className="xl:w-1/2 xl:mt-0 lg:mt-30 mt-20 flex flex-col items-start text-[color:var(--color-text)] z-[1]">
-        <h1 className="2xl:text-6xl xl:text-4xl lg:text-6xl text-4xl font-extrabold mb-[33px] xl:w-auto w-full xl:text-left text-center">
+        <h1 className="2xl:text-6xl xl:text-4xl lg:text-6xl sm:text-4xl text-3xl font-extrabold mb-[33px] xl:w-auto w-full xl:text-left text-center">
           {/* font-commandp */}
           <span className="text-violet-900">Hi, I'm</span> Yoana
         </h1>
@@ -60,7 +60,7 @@ export const Main: React.FC = () => {
         <div className="flex xl:justify-start justify-center 2xl:gap-25 ms:gap-15 gap-5 2xl:mt-5 w-full">
           <a
             href="#"
-            className="font-font flex gap-[20px] no-underline hover:text-violet-900 text-[color:var(--color-text)] rounded-[10px] 2xl:text-4xl xl:text-3xl lg:text-4xl text-3xl font-light  border-2 border-transparent bg-[length:0%] font-semibold transition-colors"
+            className="font-font flex gap-[20px] no-underline hover:text-violet-900 text-[color:var(--color-text)] rounded-[10px] 2xl:text-4xl xl:text-3xl lg:text-4xl sm:text-3xl text-2xl font-light  border-2 border-transparent bg-[length:0%] font-semibold transition-colors"
             // px-[26px] py-[17px]
             // onClick={generatePDF}
             role="button"
@@ -73,7 +73,7 @@ export const Main: React.FC = () => {
           </a>
           <a
             href="#contact"
-            className=" font-font flex gap-[20px] no-underline text-violet-900 hover:text-white rounded-[10px] 2xl:text-4xl xl:text-3xl lg:text-4xl text-3xl font-light border-2 border-transparent bg-[length:0%] font-semibold transition-colors"
+            className=" font-font flex gap-[20px] no-underline text-violet-900 hover:text-white rounded-[10px] 2xl:text-4xl xl:text-3xl lg:text-4xl sm:text-3xl text-2xl font-light border-2 border-transparent bg-[length:0%] font-semibold transition-colors"
           >
             Let's Conect
             <CircleChevronRight className="size-9 floatingLeftRight" />
