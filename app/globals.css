@@ -8,6 +8,7 @@
 @theme inline {
   /* Define breakpoints for responsive design */
   --breakpoint-ms: 42rem;
+  --breakpoint-3xl: 110rem;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
