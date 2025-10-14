@@ -7,6 +7,7 @@
 
 @theme inline {
   /* Define breakpoints for responsive design */
+  --breakpoint-xs: 30rem;
   --breakpoint-ms: 42rem;
   --breakpoint-3xl: 110rem;
 
