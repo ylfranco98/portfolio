@@ -13,11 +13,11 @@ export default function Home() {
     { name: "Contact", path: "/contact" },
   ];
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 [background:linear-gradient(-135deg,rgba(0,0,0,1)_0%,rgba(0,0,0,1)_60%,rgba(43,28,82,1)_94%,rgba(42,25,74,1)_100%)]">
+    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 [background:linear-gradient(-135deg,rgba(0,0,0,1)_0%,rgba(0,0,0,1)_60%,rgba(43,28,82,1)_94%,rgba(42,25,74,1)_100%)] fixed-gradient h-full w-full">
       <Header menuItems={menuItems} />
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Main />
-        {/* <About /> */}
+        <About />
       </main>
       {/* <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
