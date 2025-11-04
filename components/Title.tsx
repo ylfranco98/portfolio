@@ -21,7 +21,7 @@ export const Title = ({ toType }: { toType?: string }) => {
     }
   }, [index, toType]);
   return (
-    <h2 className="w-full text-white text-5xl uppercase text-center font-extrabold mb-5">
+    <h2 className="w-full text-white 2xl:text-6xl xl:text-4xl lg:text-6xl sm:text-4xl text-3xl uppercase text-center font-extrabold mb-5">
       {text}
     </h2>
   );

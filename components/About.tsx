@@ -11,15 +11,15 @@ const About: React.FC = () => {
     // </section>
     <section
       id="about"
-      className="relative bg-[rgba(35,35,35,0.6)] rounded-[15px] p-[73px] mt-[129px] z-[1] mx-[10%] shadow-[1.95px_10.95px_2.6px_rgba(0,0,0,0.15)]"
+      className="relative bg-[rgba(35,35,35,0.6)] rounded-[15px] ms:p-[73px] py-[73px] mt-[129px] z-[1] lg:mx-[10%] shadow-[1.95px_10.95px_2.6px_rgba(0,0,0,0.15)]"
     >
       <Title toType="What do I do?" />
       {/* <h2 className="w-full text-white text-5xl uppercase text-center font-extrabold mb-5">
         What do I do?
       </h2> */}
-      <div className="flex flex-row items-center">
+      <div className="flex xl:flex-row flex-col items-center">
         <Image
-          className="w-[35%] rounded-[50px] mr-[50px]"
+          className="w-[35%] rounded-[50px] mr-[50px] xl:flex hidden"
           src="/aboutImage.png"
           alt="About Image"
           width={500}
@@ -36,7 +36,7 @@ const About: React.FC = () => {
               height={100}
             /> */}
 
-            <CodeXml className="size-25 " />
+            <CodeXml className="md:size-25 size-15" />
             <div className="about-text-div">
               <h3 className="about-h3">Frontend Developer</h3>
               <p className="about-p">
@@ -52,7 +52,7 @@ const About: React.FC = () => {
               alt="Server icon"
               className="mr-[50px]"
             /> */}
-            <Database className="size-25 " />
+            <Database className="md:size-25 size-15" />
             <div className="about-text-div">
               <h3 className="about-h3">Backend Developer</h3>
               <p className="about-p">
@@ -68,7 +68,7 @@ const About: React.FC = () => {
               alt="UI icon"
               className="mr-[50px]"
             /> */}
-            <Palette className="size-25 " />
+            <Palette className="md:size-25 size-15" />
             <div className="about-text-div">
               <h3 className="about-h3">UI Designer</h3>
               <p className="about-p">
