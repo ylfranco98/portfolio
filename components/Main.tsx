@@ -61,7 +61,7 @@ export const Main: React.FC = () => {
           {/* xl:px-5 */}
           <a
             href="#"
-            className="font-font flex gap-[20px] no-underline hover:text-violet-900 text-[color:var(--color-text)] rounded-[10px] 2xl:text-4xl xl:text-3xl lg:text-4xl sm:text-3xl text-2xl font-light  border-2 border-transparent bg-[length:0%] font-semibold transition-colors"
+            className="hover:text-violet-900 text-white gap-[20px] main-buttons"
             // px-[26px] py-[17px]
             // onClick={generatePDF}
             role="button"
@@ -74,7 +74,7 @@ export const Main: React.FC = () => {
           </a>
           <a
             href="#contact"
-            className=" font-font flex gap-[10px] no-underline text-violet-900 hover:text-white rounded-[10px] 2xl:text-4xl xl:text-3xl lg:text-4xl sm:text-3xl text-2xl font-light border-2 border-transparent bg-[length:0%] font-semibold transition-colors"
+            className="text-violet-900 hover:text-white gap-[10px] main-buttons"
           >
             Let's Conect
             <CircleChevronRight className="lg:size-9 sm:size-8 size-7 floatingLeftRight" />

@@ -53,6 +53,41 @@ body {
   mask-size: cover;
 }
 
+.fixed-gradient {
+  background: linear-gradient(
+    -135deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(43, 28, 82, 1) 94%,
+    rgba(42, 25, 74, 1) 100%
+  );
+  background-attachment: fixed;
+}
+
+/* Main Section Utilities */
+@utility main-buttons {
+  @apply font-font flex  no-underline rounded-[10px] 2xl:text-4xl xl:text-3xl lg:text-4xl sm:text-3xl text-2xl font-light border-2 border-transparent bg-[length:0%] font-semibold transition-colors;
+}
+
+/* About Section Utilities */
+@utility about-li {
+  @apply flex md:flex-row flex-col justify-center items-center gap-10 rounded-[20px] list-none p-[25px] bg-[linear-gradient(90deg,rgba(165,215,232,0.42)_0%,rgba(255,255,255,0)_100%)] bg-[length:0_100%] bg-no-repeat transition-all duration-[400ms];
+}
+@utility about-text-div {
+  @apply flex flex-col gap-2 justify-center items-center md:items-start;
+}
+@utility about-h3 {
+  @apply text-violet-900 font-semibold 2xl:text-4xl xl:text-3xl lg:text-4xl sm:text-3xl text-2xl;
+  /* text-4xl */
+}
+@utility about-p {
+  @apply text-white/60 font-font text-2xl 2xl:text-2xl xl:text-xl lg:text-2xl sm:text-xl text-lg text-center md:text-left;
+  /* text-center mb-[52px] xl:h-[30vh] h-fit */
+}
+@utility about-icon {
+  @apply lg:size-25 size-15;
+}
+
 .zoom-in {
   animation:
     zoomIn 1s ease-in-out forwards,
