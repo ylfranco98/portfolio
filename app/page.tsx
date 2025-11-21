@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Experience from "@/components/Experience";
 import { Header } from "@/components/Header";
 import { Main } from "@/components/Main";
 import Projects from "@/components/Projects";
@@ -7,7 +8,7 @@ import Image from "next/image";
 export default function Home() {
   let menuItems = [
     // { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    { name: "About", path: "#about" },
     { name: "Projects", path: "/projects" },
     { name: "Skills", path: "/about" },
     { name: "Experience", path: "/projects" },
@@ -20,6 +21,7 @@ export default function Home() {
         <Main />
         <About />
         <Projects />
+        <Experience />
       </main>
       {/* <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a

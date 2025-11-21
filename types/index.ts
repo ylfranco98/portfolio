@@ -7,3 +7,12 @@ export type Project = {
   repoUrl?: string;
   imageSrc?: string;
 };
+
+export type TimelineElement = {
+  startDate: string;
+  endDate: string;
+  experiences: string[];
+  role: string;
+  organisation: string;
+  imageSrc?: string;
+};

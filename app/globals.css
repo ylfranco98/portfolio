@@ -104,6 +104,54 @@ body {
   @apply lg:size-25 size-15;
 }
 
+/* Timeline Section Utilities */
+@utility timeline {
+  @apply mx-auto p-[25px] grid grid-cols-[1fr_3px_1fr];
+}
+@utility timeline-component {
+  @apply my-[20px] mx-[50px];
+}
+
+@utility timeline-component-bg {
+  /* @apply opacity-0 p-6 bg-[rgba(35,35,35,0.6)] rounded-[10px] shadow-[rgba(0,0,0,0.15)_1.95px_10.95px_2.6px] transition-opacity transition-transform duration-[1000ms] delay-[500ms] ease-in-out; */
+  @apply p-6 bg-[rgba(35,35,35,0.6)] rounded-[10px] shadow-[rgba(0,0,0,0.15)_1.95px_10.95px_2.6px];
+}
+
+/* @utility timeline-date {
+  /* @apply text-violet-900 font-semibold 2xl:text-2xl xl:text-xl lg:text-2xl sm:text-xl text-lg; */
+/* @apply animate-slideDate;
+} */
+@utility timeline-title {
+  /* @apply text-violet-900 font-semibold 2xl:text-3xl xl:text-2xl lg:text-3xl sm:text-2xl text-xl; */
+  @apply m-0 text-[1.15em] font-bold;
+}
+@utility timeline-paragraph {
+  /* @apply text-white/60 font-font 2xl:text-xl xl:text-lg lg:text-xl sm:text-lg text-lg;
+   */
+  @apply leading-[1.5];
+}
+@utility timeline-middle {
+  @apply relative bg-violet-900/60;
+}
+@utility timeline-point {
+  @apply absolute top-0 left-1/2 transform -translate-x-1/2 w-[50px] h-[50px] bg-violet-900 rounded-full;
+}
+@utility timeline-date-right {
+  @apply text-right;
+}
+@utility timeline-component-bgLeft {
+  @apply -translate-x-[20px];
+}
+@utility timeline-component-bgRight {
+  @apply translate-x-[20px];
+}
+@utility visible {
+  @apply opacity-100 translate-x-0;
+}
+@utility timeline-component-bottom {
+  @apply mb-0;
+}
+
 .zoom-in {
   animation:
     zoomIn 1s ease-in-out forwards,
@@ -116,6 +164,10 @@ body {
 
 .floatingUpDown {
   animation: floatingUpDown 1s ease-in-out infinite;
+}
+
+.animate-slideDate {
+  animation: slideDate 0.5s ease-in-out;
 }
 
 @keyframes zoomIn {
@@ -148,5 +200,37 @@ body {
   }
   100% {
     transform: translate(0, -0px);
+  }
+}
+
+@keyframes slideDate {
+  0% {
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slideContentRight {
+  0% {
+    opacity: 0;
+    transform: translate(20px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes slideContentLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-20px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }
