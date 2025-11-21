@@ -64,6 +64,10 @@ body {
   background-attachment: fixed;
 }
 
+@utility section {
+  @apply relative flex xl:flex-row flex-col items-center justify-between mt-[50px] z-[1] lg:px-[5%];
+}
+
 /* Main Section Utilities */
 @utility main-buttons {
   @apply font-font flex  no-underline rounded-[10px] 2xl:text-4xl xl:text-3xl lg:text-4xl sm:text-3xl text-2xl font-light border-2 border-transparent bg-[length:0%] font-semibold transition-colors;
@@ -83,6 +87,18 @@ body {
 @utility about-p {
   @apply text-white/60 font-font text-2xl 2xl:text-2xl xl:text-xl lg:text-2xl sm:text-xl text-lg text-center md:text-left;
   /* text-center mb-[52px] xl:h-[30vh] h-fit */
+}
+@utility project-h3 {
+  @apply text-violet-900 font-semibold 2xl:text-3xl xl:text-2xl lg:text-3xl sm:text-2xl text-xl;
+  /* text-4xl */
+}
+@utility project-p {
+  @apply text-white/60 font-font 2xl:text-xl xl:text-lg lg:text-xl sm:text-lg text-lg;
+  /* text-center mb-[52px] xl:h-[30vh] h-fit */
+}
+@utility project-link {
+  @apply text-white font-bold 2xl:text-xl xl:text-lg lg:text-xl sm:text-lg text-lg hover:text-violet-900 transition-colors duration-300;
+  /* text-4xl */
 }
 @utility about-icon {
   @apply lg:size-25 size-15;
