@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function Home() {
   let menuItems = [
     // { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    { name: "About", path: "#about" },
     { name: "Projects", path: "/projects" },
     { name: "Skills", path: "/about" },
     { name: "Experience", path: "/projects" },

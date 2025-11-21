@@ -57,7 +57,7 @@ export default function Experience() {
   return (
     <section
       className={
-        "section relative w-full my-30 flex flex-col items-center justify-center z-[1] lg:px-[5%]"
+        "section relative w-full my-10 flex flex-col items-center justify-center z-[1] lg:px-[5%]"
       }
       id="experience"
     >
