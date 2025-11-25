@@ -14,5 +14,5 @@ export type TimelineElement = {
   experiences: string[];
   role: string;
   organisation: string;
-  imageSrc?: string;
+  category?: string;
 };

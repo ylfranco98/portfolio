@@ -1,7 +1,8 @@
 "use client";
 
+import { useIsMD, useIsXL } from "@/lib/utils";
 import { TimelineElement } from "@/types";
-import { Code } from "lucide-react";
+import { Code, GraduationCap } from "lucide-react";
 import React, { useEffect, useRef } from "react";
 
 type TimelineBubbleProps = {
@@ -16,18 +17,21 @@ const TimelineBubble = React.forwardRef<HTMLDivElement, TimelineBubbleProps>(
     return (
       <div
         ref={ref}
-        className={`timeline-component timeline-component-bg
+        className={`timeline-component xl:mr-[50px] md:mr-0 md:ml-[50px] ml-0 timeline-component-bg
         ${
           position === "r"
             ? "timeline-component-bgRight"
             : "timeline-component-bgLeft"
         }`}
       >
-        <h2 className={"timeline-title project-h3"}> {role}</h2>
+        <h2 className={"timeline-title project-h3 mb-2"}> {role}</h2>
         <p className={"timeline-paragraph project-link"}>{organisation} </p>
-        <ul>
+        <ul className="flex flex-col gap-4">
           {experiences.map((ex, id) => (
-            <li key={id} className="project-p">
+            <li
+              key={id}
+              className="project-p 2xl:text-xl lg:text-lg ms:text-base text-base"
+            >
               {ex}
             </li> // Corrected the mapping
           ))}
@@ -52,13 +56,21 @@ const TimelineDate: React.FC<TimelineDateProps> = ({
 }) => {
   console.log(id);
   return (
-    <div key={`${id}-date`} className={"timeline-component"}>
+    <div
+      key={`${id}-date`}
+      className={"timeline-component xl:ml-[50px] md:ml-0 ml-[30px] "}
+    >
       <div
-        className={`animate-slideDate ${
+        className={`animate-slideDate  ${
           position === "l" ? "timeline-date-right" : ""
         }`}
       >
-        {startDate} - {endDate}
+        <p
+          className={`md:text-right ${position === "l" ? "xl:text-right" : "xl:text-left"} text-left `}
+          // className="md:text-right xl:text-left text-left"
+        >
+          {startDate} - {endDate}
+        </p>
       </div>
     </div>
   );
@@ -66,19 +78,24 @@ const TimelineDate: React.FC<TimelineDateProps> = ({
 
 type TimelineMiddlePointProps = {
   id: number;
-  imageSrc?: string;
+  category?: string;
   organisation?: string;
 };
 
 const TimelineMiddlePoint: React.FC<TimelineMiddlePointProps> = ({
   id,
-  imageSrc,
+  category,
   organisation,
 }) => {
+  console.log(category);
   return (
     <div className={"timeline-middle"} key={`${id}-point`}>
       <div className={"timeline-point"}>
-        <Code className={"timeline-point text-white p-2"} />
+        {category === "work" ? (
+          <Code className={"timeline-point text-white p-2"} />
+        ) : (
+          <GraduationCap className={"timeline-point text-white p-2"} />
+        )}
       </div>
     </div>
   );
@@ -113,11 +130,13 @@ const Timeline: React.FC<{ history: TimelineElement[] }> = ({ history }) => {
     };
   }, []);
 
-  console.log(history);
+  // console.log(history);
+  const isXL = useIsXL();
+  const isMD = useIsMD();
   return (
-    <div className="mx-auto p-6 grid grid-cols-[1fr_3px_1fr]">
+    <div className="mx-auto p-6 md:grid xl:grid-cols-[1fr_3px_1fr] md:grid-cols-[250px_3px_1fr] flex flex-col">
       {history.map((element, id) => {
-        const i = id % 2 === 0;
+        const i = isXL ? id % 2 === 0 : !isXL; // even index on right for XL screens
         const date = (
           <TimelineDate
             id={id}
@@ -140,13 +159,30 @@ const Timeline: React.FC<{ history: TimelineElement[] }> = ({ history }) => {
 
         return (
           <React.Fragment key={id}>
-            {i ? date : bubble}
-            <TimelineMiddlePoint
-              id={id}
-              imageSrc={element.imageSrc}
-              organisation={element.organisation}
-            />
-            {i ? bubble : date}
+            {isMD ? (
+              <>
+                {i ? date : bubble}
+                <TimelineMiddlePoint
+                  id={id}
+                  category={element.category}
+                  organisation={element.organisation}
+                />
+                {i ? bubble : date}
+              </>
+            ) : (
+              <div className="flex flex-row gap-4">
+                <TimelineMiddlePoint
+                  id={id}
+                  category={element.category}
+                  organisation={element.organisation}
+                />
+                <div className="flex flex-col">
+                  {date}
+
+                  {bubble}
+                </div>
+              </div>
+            )}
           </React.Fragment>
         );
       })}

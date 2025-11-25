@@ -109,7 +109,7 @@ body {
   @apply mx-auto p-[25px] grid grid-cols-[1fr_3px_1fr];
 }
 @utility timeline-component {
-  @apply my-[20px] mx-[50px];
+  @apply my-[20px] mx-[50px] flex flex-col gap-2;
 }
 
 @utility timeline-component-bg {
@@ -131,7 +131,7 @@ body {
   @apply leading-[1.5];
 }
 @utility timeline-middle {
-  @apply relative bg-violet-900/60;
+  @apply relative bg-violet-900/60 min-w-[5px];
 }
 @utility timeline-point {
   @apply absolute top-0 left-1/2 transform -translate-x-1/2 w-[50px] h-[50px] bg-violet-900 rounded-full;
