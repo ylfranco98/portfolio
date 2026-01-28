@@ -7,3 +7,9 @@ export type Project = {
   repoUrl?: string;
   imageSrc?: string;
 };
+
+export type Skill = {
+  title: string;
+  level: "Beginner" | "Intermediate" | "Advanced";
+  imageSrc: string;
+};
