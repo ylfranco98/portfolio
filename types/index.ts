@@ -15,6 +15,7 @@ export type TimelineElement = {
   role: string;
   organisation: string;
   category?: string;
+};
 export type Skill = {
   title: string;
   level: "Beginner" | "Intermediate" | "Advanced";
