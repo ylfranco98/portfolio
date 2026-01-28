@@ -41,9 +41,12 @@ export const Main: React.FC = () => {
   };
 
   return (
-    <section className="section relative flex xl:flex-row flex-col items-center justify-between mt-[50px] z-[1] lg:px-[5%]">
+    <section
+      id="main"
+      className="section relative flex xl:flex-row flex-col items-center justify-between mt-[50px] z-[1] lg:px-[5%]"
+    >
       <Image
-        className="zoom-in z-[1] xl:w-2/5 w-2/3 rounded-full shadow-[1.95px_10.95px_2.6px_rgba(0,0,0,0.15)]  cursor-pointer animate-zoomIn "
+        className="zoom-in z-[1] xl:w-2/5 w-2/3 rounded-full shadow-[1.95px_10.95px_2.6px_rgba(0,0,0,0.15)]  cursor-pointer"
         // shadow-[0_3px_8px_rgba(0,0,0,0.24)]
         src={"/hero.jpg"}
         alt={"Main photo"}

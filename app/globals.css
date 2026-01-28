@@ -9,6 +9,7 @@
   /* Define breakpoints for responsive design */
   --breakpoint-xs: 30rem;
   --breakpoint-ms: 42rem;
+  --breakpoint-ml: 55rem;
   --breakpoint-3xl: 110rem;
 
   --color-background: var(--background);
@@ -116,6 +117,54 @@ body {
 
 .floatingUpDown {
   animation: floatingUpDown 1s ease-in-out infinite;
+}
+
+.skillContent {
+  opacity: 0;
+  display: hidden;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+
+  margin-left: 23px;
+  /* width: 100%; */
+  /* background-color: aqua; */
+}
+
+.skillContentOn {
+  animation: fadeIn 0.5s forwards;
+  animation-delay: 0.4s;
+  display: flex;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  /* 50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  } */
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes zoomIn {
