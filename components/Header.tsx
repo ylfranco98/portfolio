@@ -57,7 +57,7 @@ export function Header({
     >
       <Link
         className="flex items-center hover:text-white transition-colors group"
-        href="/"
+        href="#main"
       >
         {/* <Image
           className="rounded-full shadow-2xl border-4 border-[#f4f3e6] bg-[#f4f3e6]"
