@@ -8,6 +8,14 @@ export type Project = {
   imageSrc?: string;
 };
 
+export type TimelineElement = {
+  startDate: string;
+  endDate: string;
+  experiences: string[];
+  role: string;
+  organisation: string;
+  category?: string;
+};
 export type Skill = {
   title: string;
   level: "Beginner" | "Intermediate" | "Advanced";
