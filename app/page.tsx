@@ -22,8 +22,8 @@ export default function Home() {
         <Main />
         <About />
         <Projects />
-        <Experience />
         <Skills />
+        <Experience />
       </main>
       {/* <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a

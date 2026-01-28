@@ -169,6 +169,7 @@ body {
 
 .animate-slideDate {
   animation: slideDate 0.5s ease-in-out;
+}
 .skillContent {
   opacity: 0;
   display: hidden;
